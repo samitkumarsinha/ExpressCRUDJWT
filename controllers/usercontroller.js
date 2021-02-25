@@ -25,7 +25,7 @@ module.exports = {
   deleteuser(req,res){
     // console.log(req.body);
     console.log(req.params.id,"Deleted");
-    // usermodel.findByIdAndRemove(req.params.id, (err, result) => {
+    // usermodel.findByIdAndRemove(req.params.id, (err, result) => { //another way
     usermodel.findByIdAndDelete(req.params.id, (err, result) => {
         res.send(result);
     })
