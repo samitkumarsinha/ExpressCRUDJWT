@@ -10,7 +10,7 @@ module.exports = {
   userlist(req, res) {
     usermodel.find({}, function (err, result) {
       if (!err) {
-        res.send(result);
+        res.json(result);
       }
     });
   },
